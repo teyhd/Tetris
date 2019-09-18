@@ -299,21 +299,22 @@ var timer = function(flag,speed){
 function update_speed(){
     if(pause)timer(true,speed);
 }
-
+function set_pause(){
+if (pause==false) {
+    timer(true,speed);
+    pause=true;
+}
+else{
+    timer(false,1);
+    pause=false;
+}
+console.log(pause);    
+}
 document.addEventListener('keydown', function(e) {
    // console.log(e.keyCode);
-    if (e.keyCode == 27){ 
-        if (pause==false) {
-            timer(true,speed);
-            pause=true;
-        }else{
-        timer(false,1);
-        pause=false;
-        }
-        console.log(pause);
-    }
-   if ((e.keyCode == 68)||(e.keyCode == 39)) go_right();//right
-   if ((e.keyCode == 65)||(e.keyCode == 37)) go_left(); //left
-   if ((e.keyCode == 87)||(e.keyCode == 38)) turn(); //up
-   if ((e.keyCode == 83)||(e.keyCode == 40)) move(); //down
+    if (e.keyCode == 27) set_pause();
+    if ((e.keyCode == 68)||(e.keyCode == 39)) go_right();//right
+    if ((e.keyCode == 65)||(e.keyCode == 37)) go_left(); //left
+    if ((e.keyCode == 87)||(e.keyCode == 38)) turn(); //up
+    if ((e.keyCode == 83)||(e.keyCode == 40)) move(); //down
 });

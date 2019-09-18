@@ -6,6 +6,8 @@ $(document).ready(function() {
     var btn_down = $(".down-btn");
     var btn_left = $(".left-btn");
     var btn_right = $(".right-btn");
+    var btn_pause = $(".pause-btn");
+    var pictu = $(".picture");
     //inp_name.keydown( function(e) {e.preventDefault();});
     init_arr();
     init_field();
@@ -40,8 +42,18 @@ function btn_pos() {
         top: btn_up.position().top,
         left: btn_left.width()+btn_left.position().left+20,
     });
+    btn_pause.offset({
+        top: 300,
+        left: 225,
+    });
 }
 
+    btn_pause.on('click', function() {
+            set_pause();
+            if(pause) pictu.attr("src","img/pause.png");
+            else pictu.attr("src","img/play.png");
+            //src="img/pause.png"
+        });
     btn_up.on('click', function() {
         turn();
     });
