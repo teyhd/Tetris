@@ -274,6 +274,7 @@ function turn(){
     if (can_went(n_x,n_y,turn_tet)) {
         tetr(n_x,n_y,n_tet,false);
         n_tet = turn_tet;
+        tetr(n_x,n_y,n_tet,true);
     }
 }//Поворот фигуры
 
