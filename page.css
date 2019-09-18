@@ -1,0 +1,48 @@
+.name-input {
+    position: absolute;
+    left: 5px;
+    top: 100px;
+    width: 284px;
+    height: 160px;
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    background-color: #ffffff;
+   /* background-image: url(/img/back.png);*/
+    text-align: center;
+    padding: 9px 5px calc(9px + 3px);
+}
+
+#input-your-name {
+    font-size: 26pt;
+    position: relative;
+    top: 22px;
+}
+
+#input-name {
+    padding: 9px 5px calc(9px + 3px);
+    margin: 10px;
+    margin-top: 50px;
+    margin-right: 0px;
+    text-align: center;
+    background-color: #d6eee2;
+    box-align: center;
+}
+
+#button-name {
+    padding: 9px 5px calc(9px + 3px);
+    margin: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+    box-align: center;
+    background-color: #d6eee2;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    background: #40c781;
+    box-shadow: 0 -3px #35a76e inset;
+    transition: 0.2s;
+    border-radius: 50px;
+}
