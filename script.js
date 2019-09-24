@@ -174,7 +174,7 @@ console.log("Deleted: "+y);
 function is_fall(){
  let ans = false;
       for(var x = 0; x < 10; x++){
-        if (arr[get_id(x*20,0)].busy==true) ans=true; 
+        if (arr[get_id(x*20,0)].busy==true){ ans=true; break;}
         else ans = false;
       }    
  return ans;
@@ -264,13 +264,11 @@ function go_right(){
 
 let turn_tet;
 function turn(){
-    console.log(n_turn_te);
     n_num++;
     if(typeof n_turn_te[n_num] !=="object"){
         n_num = 0;
     } 
     turn_tet = n_turn_te[n_num];
-      console.log(turn_tet);         
     if (can_went(n_x,n_y,turn_tet)) {
         tetr(n_x,n_y,n_tet,false);
         n_tet = turn_tet;

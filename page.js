@@ -20,7 +20,7 @@ $(document).ready(function() {
         new_elem();
         predict();
         timer(true,1000);
-        setInterval(draw_it,150);
+        setInterval(draw_it,50);
         setInterval(update_speed,5000);
     });    
 
